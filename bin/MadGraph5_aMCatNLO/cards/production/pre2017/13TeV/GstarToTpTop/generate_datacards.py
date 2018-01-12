@@ -24,17 +24,17 @@ def generate_customizecards(Gstar_mass, Gstar_width, Tp_mass, Tp_width, chiralit
         Tp_mass_width=Tp_mass*0.3       
        
     script=""
-    script+="""set param_card frblock 4 """+str(Tp_mass)+""".000
-set param_card mass 9000010 """+str(Gstar_mass)+""".000
-set param_card mass 9000001 """+str(Tp_mass)+""".000
-set param_card mass 9000002 """+str(Tp_mass)+""".000
-set param_card mass 9000003 """+str(Tp_mass)+""".000
-set param_card mass 9000004 """+str(Tp_mass)+""".000
-set param_card DECAY 9000001 """+str(Tp_mass_width)+""".000
-set param_card DECAY 9000002 """+str(Tp_mass_width)+""".000
-set param_card DECAY 9000003 """+str(Tp_mass_width)+""".000
-set param_card DECAY 9000004 """+str(Tp_mass_width)+""".000
-set param_card DECAY 9000010 """+str(Gstar_mass_width)+""".000"""
+    script+="""set param_card frblock 4 """+str(float(Tp_mass))+"""
+set param_card mass 9000010 """+str(float(Gstar_mass))+"""
+set param_card mass 9000001 """+str(float(Tp_mass))+"""
+set param_card mass 9000002 """+str(float(Tp_mass))+"""
+set param_card mass 9000003 """+str(float(Tp_mass))+"""
+set param_card mass 9000004 """+str(float(Tp_mass))+"""
+set param_card DECAY 9000001 """+str(Tp_mass_width)+"""
+set param_card DECAY 9000002 """+str(Tp_mass_width)+"""
+set param_card DECAY 9000003 """+str(Tp_mass_width)+"""
+set param_card DECAY 9000004 """+str(Tp_mass_width)+"""
+set param_card DECAY 9000010 """+str(Gstar_mass_width)
     
     
     f=open("ZpTpt_Zp"+str(Gstar_mass)+Gstar_width+"_Tp"+str(Tp_mass)+Tp_width+chirality+"_"+Tp_decay+"/ZpTpt_Zp"+str(Gstar_mass)+Gstar_width+"_Tp"+str(Tp_mass)+Tp_width+chirality+"_"+Tp_decay+"_customizecards.dat","w")
@@ -366,10 +366,10 @@ def generate_run_card(Gstar_mass, Gstar_width, Tp_mass, Tp_width, chirality, Tp_
     f.close()
     
 
-Gstar_mass_list=[1500,1500,1500, 1750,1750, 2000,2000,2000, 2250,2250, 2500,2500,2500, 3000,3000,3000, 3500,3500,3500, 4000,4000,4000]
-Tp_mass_list   =[ 800,1000,1200, 1000,1300, 1000,1300,1500, 1300,1500, 1300,1500,1800, 1500,2000,2500, 1800,2100,2500, 2100,2500,3000]
-#Gstar_mass_list=[1500]
-#Tp_mass_list   =[ 800]
+#Gstar_mass_list=[1500,1500,1500, 1750,1750, 2000,2000,2000, 2250,2250, 2500,2500,2500, 3000,3000,3000, 3500,3500,3500, 4000,4000,4000]
+#Tp_mass_list   =[ 800,1000,1200, 1000,1300, 1000,1300,1500, 1300,1500, 1300,1500,1800, 1500,2000,2500, 1800,2100,2500, 2100,2500,3000]
+Gstar_mass_list=[1500]
+Tp_mass_list   =[ 800]
 
 Gstar_width_list=["Nar","WID"]
 Tp_width_list=["Nar"]
